@@ -39,7 +39,7 @@ const Login = () => {
     const onSubmit = async formData => {
         try {
             // porta para o servidor dos dados
-            const { data } =  await api.get(`http://localhost:3000/users?email=${formData.email}&senha=${formData.password}`)
+            const { data } =  await api.get(`users?email=${formData.email}&senha=${formData.password}`)
             if(data.length === 1){
                 navigate('/feed')
             } else {
