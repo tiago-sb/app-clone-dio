@@ -1,6 +1,16 @@
 {
-    "users": [
-        { "id": 1, "name": "Tiago", "email": "tiago@gmail.com", "senha": "123456"},
-        { "id": 2, "name": "Paulo", "email": "paulo@gmail.com", "senha": "123456"}
-    ]
+  "users": [
+    {
+      "id": "ffa8",
+      "name": "tiago2",
+      "email": "tst2@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "646a",
+      "name": "Raja",
+      "email": "raja@gmail.com",
+      "password": "12345"
+    }
+  ]
 }
