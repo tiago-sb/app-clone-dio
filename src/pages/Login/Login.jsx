@@ -34,7 +34,7 @@ const Login = () => {
 
   const handleCreatedAccount = async (data) => {
     try {
-      const response = await fetch(`http://localhost:5001/users`, {
+      const response = await fetch(`https://app-clone-dio.vercel.app/users`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
