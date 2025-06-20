@@ -34,7 +34,7 @@ const Login = () => {
 
   const handleCreatedAccount = async (data) => {
     try {
-      const response = await fetch(`http://localhost:3001/login`, {
+      const response = await fetch(`https://app-clone-dio.onrender.com/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(data)
