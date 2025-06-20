@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { json, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -34,26 +34,20 @@ const Login = () => {
 
   const handleCreatedAccount = async (data) => {
     try {
-      const response = await fetch(`https://app-clone-dio.vercel.app/users`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        }
+      const response = await fetch(`http://localhost:3001/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
       })
-      const conteudo_db = await response.json()
-      
+
       if (response.ok) {
-        const userMatches = conteudo_db.find(user => user.email === data.email && user.password === data.password)
-        
-        if (userMatches) {
           alert('Usuário logado com sucesso!')
           localStorage.setItem('authenticated', 'true')
-          localStorage.setItem('user', JSON.stringify(userMatches))
+          localStorage.setItem('user', JSON.stringify(data))
           navigate('/feed')
-        } else {
-          alert('E-mail ou nome não correspondem.')
-          window.location.reload()
-        }
+      } else {
+        alert('E-mail ou Senha errados!')
+        window.location.reload()
       }
     } catch (error) {
       alert('Erro ao logar usuário')

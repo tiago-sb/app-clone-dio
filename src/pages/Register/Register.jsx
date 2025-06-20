@@ -25,12 +25,10 @@ const Register = () => {
 
   const handleCreatedAccount = async (data) => {
     try {
-      const response = await fetch('https://app-clone-dio.vercel.app/users', {
+      const response = await fetch('http://localhost:3001/register', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       })
 
       if (response.ok) {

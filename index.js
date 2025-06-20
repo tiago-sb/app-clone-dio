@@ -8,7 +8,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const PORT = process.env.PORT || 3000
+const PORT = 3001
 const DB_PATH = path.join(__dirname, 'db.json')
 
 // Função utilitária para ler e escrever no arquivo db.json
@@ -37,7 +37,7 @@ app.post('/login', (req, res) => {
   if (user) {
     res.json({ message: 'Login bem-sucedido', user })
   } else {
-    res.status(401).json({ message: 'Credenciais inválidas' })
+    res.json({ message: `Credenciais inválidas` })
   }
 })
 
