@@ -8,7 +8,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const PORT = 3001
+const PORT = 5001
 const DB_PATH = path.join(__dirname, 'db.json')
 
 // Função utilitária para ler e escrever no arquivo db.json

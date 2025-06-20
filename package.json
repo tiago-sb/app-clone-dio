@@ -19,6 +19,7 @@
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.1",
     "react-scripts": "^5.0.1",
+    "serve": "^14.2.4",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "styled-components": "^6.1.8",
@@ -32,7 +33,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "json-server --watch db.json --port 5001"
+    "api": "json-server --watch db.json --port 5001",
+    "serve": "serve -s build"
   },
   "eslintConfig": {
     "extends": [
